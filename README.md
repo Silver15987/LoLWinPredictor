@@ -25,4 +25,18 @@ The data used for this project was obtained from the Riot API using their develo
 - skillshotsHit: Similar to skillshotsdoged, skillshotshit is a metric to show how many skillshots a player hit.
 - win: The final metric which tells the result of the player's game.
 
+# Data Analysis
+To begin with I started with a cross-correlation matrix as it provides a qualitative analysis of the correlation between the data, I used the 'Pearson Correlation Coefficient'. Now we have a linear relationship between two different variables.
+For starters, we can find that there is a direct relationship between gold earned by the player and the kills they have gained. This is a true observation, as every kill grants the player at least 300 gold and increases if there is a bounty on the enemy killed.
+Same relation is found between the total damage dealt, kills and gold earned. But after a thorough analysis of the corelation matrix, more insights of the game can be gained. \
+For example, the game has a lane system, in which each player is assigned a lane, other than the jungle role. Support is a role which helps the players by planting vission, controlling the map and providing utility, as such they only gain their gold through assists. They are also mostly responsible for planting vission, whcih is why vission score has a negative relation with gold, kills and minions killed.
+In a similar manner, most gold is funneled towards the 'carry' of the team, or the 'adc' (players who deal consistent and high damage) who also happen to take most kills, so we find a strong relation between gold and kills.\
+![png](images/corelation_map.png)
+For better understanding of the data, we also vizualized more relationship between the data items present in the dataset. Here is a pairplot, plotted using the seaborn library. Here, the data is in relation with all the dataitems present, with two different outcomes of the game. Loss, plotted as a blue circle and win, plotted as an orange square.\
+![png](images/pairplot.png)
+This by no means is the clear picture of the game state, as different players play different roles. Such as the example of a support player we discussed above, who don't really earn any gold, nor do they have much on the 'minionsKilled' or 'gold' statistic or with other roles which do not contribute towards overall 'vision' statistic in the game. 
+More such inferences can be taken by indepth analysis of the data. Since I am already an avid player of the game (totally not addicted) and follow the professional analysts, I understand to a certain degree the relations between these different statistics.
+![png](images/vision_gold_relation.png)
+For example, the relation mentioned above with gold and vision score. I experimented with more such relations and found what features I can use for the final model that is to be created.
+
 # Methods
