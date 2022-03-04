@@ -35,7 +35,7 @@ In a similar manner, most gold is funneled towards the 'carry' of the team, or t
 For better understanding of the data, we also vizualized more relationship between the data items present in the dataset. Here is a pairplot, plotted using the seaborn library. Here, the data is in relation with all the dataitems present, with two different outcomes of the game. Loss, plotted as a blue circle and win, plotted as an orange square.\
 ![png](images/pairplot.png)
 This by no means is the clear picture of the game state, as different players play different roles. Such as the example of a support player we discussed above, who don't really earn any gold, nor do they have much on the 'minionsKilled' or 'gold' statistic or with other roles which do not contribute towards overall 'vision' statistic in the game. 
-More such inferences can be taken by indepth analysis of the data. Since I am already an avid player of the game (totally not addicted) and follow the professional analysts, I understand to a certain degree the relations between these different statistics.
+More such inferences can be taken by indepth analysis of the data. Since I am already an avid player of the game (totally not addicted) and follow the professional analysts, I understand to a certain degree the relations between these different statistics.\
 ![png](images/vision_gold_relation.png)
 For example, the relation mentioned above with gold and vision score. I experimented with more such relations and found what features I can use for the final model that is to be created.
 
